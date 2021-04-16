@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Macowins {
+public class CajaRegistradora {
 	List<Venta> ventas;
 	
-	public Macowins() {
+	public CajaRegistradora() {
 		this.ventas = new ArrayList<>();
 	}
 	

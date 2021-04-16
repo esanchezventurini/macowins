@@ -6,16 +6,16 @@ import java.util.List;
 
 public class Venta {
 	
-	List<PrendaConCantidad> prendas;
+	List<Item> prendas;
 	LocalDate fecha;
 	
 	public Venta(LocalDate fecha) {
-		this.prendas = new ArrayList<PrendaConCantidad>();
+		this.prendas = new ArrayList<Item>();
 		this.fecha = fecha;
 	}
 	
 	public void agregarPrendaConCantidad(Prenda prenda, int cantidad) {
-		var prendaCantidad = new PrendaConCantidad(prenda, cantidad);
+		var prendaCantidad = new Item(prenda, cantidad);
 		prendas.add(prendaCantidad);
 	}
 	

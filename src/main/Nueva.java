@@ -1,7 +1,7 @@
 package main;
 
-public class Nueva extends EstadoPrenda{
-	public Nueva() {
-		
+public class Nueva implements EstadoPrenda{
+	public double calcularPrecioPrenda(double precioBase) {
+		return precioBase;
 	}
 }

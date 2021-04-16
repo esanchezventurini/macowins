@@ -1,7 +1,5 @@
 package main;
 
-public abstract class EstadoPrenda {
-	public double calcularPrecioPrenda(double precioBase) {
-		return precioBase;
-	}
+public interface EstadoPrenda {
+	public double calcularPrecioPrenda(double precioBase);
 }

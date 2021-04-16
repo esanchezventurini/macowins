@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import main.Liquidacion;
-import main.Macowins;
+import main.CajaRegistradora;
 import main.Nueva;
 import main.Prenda;
 import main.Promocion;
@@ -13,8 +13,8 @@ import main.TipoPrenda;
 import main.VentaConTarjeta;
 import main.Venta;
 
-public class MacowinsTest {
-	Macowins macowins;
+public class CajaRegistradoraTest {
+	CajaRegistradora cajaRegistradora;
 	
 	LocalDate unaFecha;
 	LocalDate otraFecha;
@@ -30,7 +30,7 @@ public class MacowinsTest {
 
 	@Before
 	public void init() {
-		macowins = new Macowins();
+		cajaRegistradora = new CajaRegistradora();
 		
 		unaFecha = LocalDate.of(2021, 1, 19);
 		otraFecha = LocalDate.of(2021, 1, 20);
@@ -48,14 +48,14 @@ public class MacowinsTest {
 		ventaEfectivo2.agregarPrendaConCantidad(pantalonAzul, 1);
 		ventaEfectivo3.agregarPrendaConCantidad(pantalonAzul, 1000);
 		
-		macowins.registrarVenta(ventaEfectivo);
-		macowins.registrarVenta(ventaEfectivo2);
-		macowins.registrarVenta(ventaEfectivo3);
+		cajaRegistradora.registrarVenta(ventaEfectivo);
+		cajaRegistradora.registrarVenta(ventaEfectivo2);
+		cajaRegistradora.registrarVenta(ventaEfectivo3);
 	}
 	
 	@Test
 	public void liquidacionCalculaPrecioBien() {
-		var montoVentasUnaFeha = macowins.ventasDeLaFecha(unaFecha);
+		var montoVentasUnaFeha = cajaRegistradora.ventasDeLaFecha(unaFecha);
 		Assert.assertEquals(montoVentasUnaFeha, 3000,0);
 	}
 }

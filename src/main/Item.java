@@ -1,10 +1,10 @@
 package main;
 
-public class PrendaConCantidad {
+public class Item {
 	Prenda prenda;
 	int cantidad;
 	
-	public PrendaConCantidad(Prenda prenda, int cantidad) {
+	public Item(Prenda prenda, int cantidad) {
 		this.prenda = prenda;
 		this.cantidad = cantidad;
 	}

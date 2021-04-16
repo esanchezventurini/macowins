@@ -1,6 +1,6 @@
 package main;
 
-public class Promocion extends EstadoPrenda{
+public class Promocion implements EstadoPrenda{
 	float precioARestar;
 	
 	public Promocion(float precioARestar) {
@@ -9,7 +9,6 @@ public class Promocion extends EstadoPrenda{
 	
 	@Override
 	public double calcularPrecioPrenda(double precioBase) {
-		var precioSinPromocion = super.calcularPrecioPrenda(precioBase);
-		return Math.max(precioSinPromocion - precioARestar, 0);
+		return Math.max(precioBase - precioARestar, 0);
 	}
 }

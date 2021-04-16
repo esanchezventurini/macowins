@@ -1,13 +1,9 @@
 package main;
 
-public class Liquidacion extends EstadoPrenda{
-	
-	public Liquidacion() {
-		
-	}
+public class Liquidacion implements EstadoPrenda{
 	
 	@Override
 	public double calcularPrecioPrenda(double precioBase) {
-		return super.calcularPrecioPrenda(precioBase) * 0.5;
+		return precioBase * 0.5;
 	}
 }
